@@ -27,15 +27,16 @@ bash download_data.sh --ufal-user=ufal_username --ufal-password=ufal_password -d
 * Firstly we had to convert data from all sources to one format supported by fairseq
 * This format is one file per language only with data (no metada) with file ending with shortcut of language (cs, en)
 * we implemented this functionality in python script   `preprocess_data.py`
+* we wrapped preprocessing of all required files in one shell script
+##### Example of usage
+```bash
+bash preprocess_data.sh -i=data/raw-data -o=data/preprocessed-data
+```
 
 #### Train tokenizer and tokenized data
 TODO
 #### Binarize data by fairseq
 TODO
-#### Example of usage
-TODO
-```bash
-```
 
 
 
