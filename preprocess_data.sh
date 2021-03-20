@@ -2,14 +2,14 @@
 
 
 # default command line arguments
-INPUT_DATA_DIRECTORY=data/raw_data
-OUTPUT_DATA_DIRECTORY=data/preprocessed_data
+INPUT_DATA_DIRECTORY=data/raw-data
+OUTPUT_DATA_DIRECTORY=data/preprocessed-data
 
 
 # prints help
 function usage()
 {
-    echo -e "This downloads and extract all required data for training, validation and testing"
+    echo -e "This preprocess required data for training, validation and testing into format expected in fairseq for binarization"
     echo -e ""
     echo -e "./$0"
     echo -e "\t-h --help  prints help"
@@ -46,17 +46,17 @@ while [ "$1" != "" ]; do
     shift
 done
 
-## Create python environment and activate it
-python3 -m venv venv
-source /venv/bin/activate
-
-
-### Install  python requirements
-pip install -r requirements.txt
-
-
-## Preprocess data to fairseq format
-## preprocess first 10k lines of TEDTALK as validation set
+### Create python environment and activate it
+#python3 -m venv venv
+#source /venv/bin/activate
+#
+#
+#### Install  python requirements
+#pip install -r requirements.txt
+#
+#
+### Preprocess data to fairseq format
+### preprocess first 10k lines of TEDTALK as validation set
 echo ;echo "====================PREPROCESSING TEDTALK VALIDATION========================="
 python preprocess_data.py --source-lang=en\
                             --target-lang=cs \

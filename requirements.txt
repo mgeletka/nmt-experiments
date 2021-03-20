@@ -1,2 +1,5 @@
 beautifulsoup4~=4.9.3
 regex~=2021.3.17
+fairseq~=0.10.2
+sentencepiece~=0.1.95
+tensorboard~=2.4.1

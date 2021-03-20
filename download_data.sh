@@ -3,7 +3,7 @@
 # default command line arguments
 UFAL_USER=''
 UFAL_PASSWORD=''
-DATA_DIRECTORY=data/raw_data
+DATA_DIRECTORY=data/raw-data
 
 # prints help
 function usage() {
@@ -48,8 +48,8 @@ done
 
 echo
 echo "====================Downloading CZENG TRAIN========================="
-CZENG_TRAIN_GZ_FILE=$DATA_DIRECTORY/czeng_train.tgz
-wget -P $DATA_DIRECTORY http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-train.gz -O $CZENG_TRAIN_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
+CZENG_TRAIN_GZ_FILE=$DATA_DIRECTORY/czeng_train.gz
+wget http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-train.gz -O $CZENG_TRAIN_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
 
 echo "====================EXTRACTING CZENG TRAIN========================="
 gzip -d $CZENG_TRAIN_GZ_FILE
@@ -59,7 +59,7 @@ gzip -d $CZENG_TRAIN_GZ_FILE
 #echo
 #echo "====================Downloading CZENG TEST========================="
 #CZENG_TEST_GZ_FILE=$DATA_DIRECTORY/czeng_test.gz
-#wget -P $DATA_DIRECTORY http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-test.gz -O $CZENG_TEST_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
+#wget http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-test.gz -O $CZENG_TEST_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
 #echo "====================EXTRACTING CZENG TEST========================="
 #gzip -d $CZENG_TEST_GZ_FILE
 #

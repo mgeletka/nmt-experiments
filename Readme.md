@@ -33,15 +33,28 @@ bash download_data.sh --ufal-user=ufal_username --ufal-password=ufal_password -d
 bash preprocess_data.sh -i=data/raw-data -o=data/preprocessed-data
 ```
 
-#### Train tokenizer and tokenized data
-TODO
-#### Binarize data by fairseq
-TODO
+#### Tokenization
+For tokenization of data we used sentence piece library (documantation [here](https://github.com/google/sentencepiece))
+In this experiment we used single dictionary for both language of size 32000 and BPE tokenization algorithm
+##### Example of usage (training of tokenizer)
+```bash
+spm_train --input=first-file-to-train,second-file-to-train  --model_prefix=model-name --vocab_size=32000 --model_type=bpe
+```
 
+##### Example of usage (tokenize data)
+```bash
+spm_encode --model=model-path filename-to-encode > .file-with-tokenized-data
+```
+
+#### Binarize data by fairseq
+To used our data with fairseq we have preprocess data by fairseq CLI tool fairseq-preprocess.
+This tool binarize data and build frequency dictionaries to be used in the training
+For detail information refer to [fairseq CLI documentation] (https://fairseq.readthedocs.io/en/latest/command_line_tools.html)
 
 
 ## Train data
-TODO
+To train we used fairseq CLI command `fairseq-train`. For detail hyperparam refer to `train.sh` file.
+This whole experiment was executed on single NVIDIA RXT 3080 GPU.
 
-## Data evaluation
+## Model evaluation
 TODO
