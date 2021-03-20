@@ -1,8 +1,9 @@
 #!/bin/bash
 
-LOGS_DIRECTOR=outputs.log
+LOGS_DIRECTORY=outputs.log
 DATA_PATH=''
 CHECKPOINTS_DIRECTORY=checkpoints
+TENSORBOARD_LOGDIR=tensorboard
 
 fairseq-train $DATA_PATH \
   --arch transformer_vaswani_wmt_en_de_big \
@@ -21,11 +22,11 @@ fairseq-train $DATA_PATH \
   --max-tokens 3584 \
   --fp16 \
   --valid-subset=valid,valid1 \
-  --tensorboard-logdir tensorboard_czeng2 \
+  --tensorboard-logdir $TENSORBOARD_LOGDIR \
   --save-interval 1 \
   --save-interval-updates 5000 \
   --keep-interval-updates 10 \
   --eval-bleu \
   --update-freq=16 \
   --patience 5 \
-  --save-dir $CHECKPOINTS_DIRECTORY &>>outputs-czeng2_en_cs.log &
+  --save-dir $CHECKPOINTS_DIRECTORY &>>$LOGS_DIRECTORY &
