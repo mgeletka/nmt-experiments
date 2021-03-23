@@ -57,4 +57,22 @@ To train we used fairseq CLI command `fairseq-train`. For detail hyperparam refe
 This whole experiment was executed on single NVIDIA RXT 3080 GPU.
 
 ## Model evaluation
+
+### Tensorboard
+TODO
+
+### BLEU on test sets
+Computed BLEU scores of final best Model
+
+| Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
+| ------------- |:-------------:| -----:| -----:|  -----:|
+| Czeng test      | 37.82 | 29.87 | 30.58|36.4
+| Newstest 2019      | 31.06      |   23.27 | 23.89|28.01
+| Newstest from sacremoses (origlang en)     | X     |   19.67 | 20.06| 24.7
+| TedTalks 2020 | 28.99  |    19.93 | 20.65 |25.9
+
+Computed BLEU scores of Average 10  model
+TODO
+
+Computed BLEU score of Average 5 model
 TODO
