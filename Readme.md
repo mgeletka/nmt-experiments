@@ -59,7 +59,11 @@ This whole experiment was executed on single NVIDIA RXT 3080 GPU.
 ## Model evaluation
 
 ### Tensorboard
-TODO
+To see detail of this particular experimetn run please download tensorboard directory in this branch and run
+(You must have active virtualenv with installed tensorboard)
+```bash
+tensorboard --logdir=tensorboard
+```
 
 ### BLEU on test sets
 **Computed BLEU scores of final best Model**
@@ -67,7 +71,7 @@ TODO
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
 | Czeng test      | 37.82 | 29.87 | 30.58|36.4
-| Newstest 2019      | 31.06      |   23.27 | 23.89|28.01
+| Newstest 2019      | 31.06      |   23.27 | 23.89|28.0
 | Newstest from sacremoses (origlang en)     | X     |   19.67 | 20.06| 24.7
 | TedTalks 2020 | 28.99  |    19.93 | 20.65 |25.9
 
@@ -79,7 +83,7 @@ Newstest from sacremoses (origlang en)	= 25.1
 
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
-| Czeng test      | X | X | X|X
-| Newstest 2019      | X      |   X | X|X
+| Czeng test      | 38.0 | 30.02 | 30.73|36.6
+| Newstest 2019      | 31.19      |   23.39 | 23.99|28.2
 | Newstest from sacremoses (origlang en)     | X     |   X | X| 25.3
-| TedTalks 2020 | X  |  X | X |X
+| TedTalks 2020 | 29.3  | 20.1 | 20.82 | 26.2
