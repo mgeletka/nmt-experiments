@@ -85,5 +85,5 @@ Newstest from sacremoses (origlang en)	= 25.1
 | ------------- |:-------------:| -----:| -----:|  -----:|
 | Czeng test      | 38.0 | 30.02 | 30.73|36.6
 | Newstest 2019      | 31.19      |   23.39 | 23.99|28.2
-| Newstest from sacremoses (origlang en)     | X     |   X | X| 25.3
+| Newstest from sacremoses (origlang en)     | X     |   20.15 | 20.54| 25.3
 | TedTalks 2020 | 29.3  | 20.1 | 20.82 | 26.2
