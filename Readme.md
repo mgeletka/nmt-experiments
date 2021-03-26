@@ -74,6 +74,8 @@ tensorboard --logdir=tensorboard
 | Newstest 2019      | 31.06      |   23.27 | 23.89|28.0
 | Newstest from sacremoses (origlang en)     | X     |   19.67 | 20.06| 24.7
 | TedTalks 2020 | 28.99  |    19.93 | 20.65 |25.9
+| Newstest2017 | X  | 18.54 | 19.07 | 23.6
+
 
 **Computed BLEU scores of Average 8  model**
 TODO
@@ -87,3 +89,4 @@ Newstest from sacremoses (origlang en)	= 25.1
 | Newstest 2019      | 31.19      |   23.39 | 23.99|28.2
 | Newstest from sacremoses (origlang en)     | X     |   20.15 | 20.54| 25.3
 | TedTalks 2020 | 29.3  | 20.1 | 20.82 | 26.2
+| Newstest2017 | X  | 18.58 | 19.07 | 23.6
