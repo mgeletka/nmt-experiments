@@ -55,8 +55,8 @@ while [ "$1" != "" ]; do
 done
 
 source venv/bin/activate
-#echo "====================TRAINING TOKENIZER========================="
-#spm_train --input=$TRAIN_FILES --model_prefix=$MODEL_PREFIX --vocab_size=$VOCABULARY_SIZE --model_type=$TOKENIZATION_TYPE
+echo "====================TRAINING TOKENIZER========================="
+spm_train --input=$TRAIN_FILES --model_prefix=$MODEL_PREFIX --vocab_size=$VOCABULARY_SIZE --model_type=$TOKENIZATION_TYPE
 
 echo "====================TOKENIZING DATA========================="
 for filename in $INPUT_DATA_DIRECTORY/*; do
@@ -64,14 +64,14 @@ for filename in $INPUT_DATA_DIRECTORY/*; do
   spm_encode --model=$MODEL_PREFIX.model $filename >$TOKENIZED_DATA_DIRECTORY/$(basename -- $filename)
 done
 
-#echo "====================BINARIZE DATA========================="
-#fairseq-preprocess --source-lang en \
-#  --target-lang cs \
-#  --trainpref $TOKENIZED_DATA_DIRECTORY/train-czeng \
-#  --validpref $TOKENIZED_DATA_DIRECTORY/validation-newstest2018,$TOKENIZED_DATA_DIRECTORY/validation-tedtalks \
-#  --testpref $TOKENIZED_DATA_DIRECTORY/test-czeng,$TOKENIZED_DATA_DIRECTORY/test-newstest2019,$TOKENIZED_DATA_DIRECTORY/test-tedtalks \
-#  --destdir $BINARIZE_DATA_DIRECTORY \
-#  --nwordssrc 32768 \
-#  --nwordstgt 32768 \
-#  --joined-dictionary \
-#  --workers 20
+echo "====================BINARIZE DATA========================="
+fairseq-preprocess --source-lang cs \
+  --target-lang en \
+  --trainpref $TOKENIZED_DATA_DIRECTORY/train-czeng \
+  --validpref $TOKENIZED_DATA_DIRECTORY/validation-newstest2018,$TOKENIZED_DATA_DIRECTORY/validation-tedtalks \
+  --testpref $TOKENIZED_DATA_DIRECTORY/test-czeng,$TOKENIZED_DATA_DIRECTORY/test-newstest2019,$TOKENIZED_DATA_DIRECTORY/test-tedtalks \
+  --destdir $BINARIZE_DATA_DIRECTORY \
+  --nwordssrc 32768 \
+  --nwordstgt 32768 \
+  --joined-dictionary \
+  --workers 20

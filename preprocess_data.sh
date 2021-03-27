@@ -15,7 +15,6 @@ function usage()
     echo -e "\t-h --help  prints help"
     echo -e "\t-i --input-directory directory with downloaded all raw data"
     echo -e "\t-o --output-directory directory to save all preprocessed data"
-
 }
 
 function info
@@ -58,8 +57,8 @@ done
 ### Preprocess data to fairseq format
 ### preprocess first 10k lines of TEDTALK as validation set
 echo ;echo "====================PREPROCESSING TEDTALK VALIDATION========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file tedtalks \
                             --input-path=$INPUT_DATA_DIRECTORY/tedtalks \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/validation-tedtalks \
@@ -67,8 +66,8 @@ python preprocess_data.py --source-lang=en\
 #
 ### preprocess TEDTALK without first 10k lines as test set
 echo ;echo "====================PREPROCESSING TEDTALK TEST========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file tedtalks \
                             --input-path=$INPUT_DATA_DIRECTORY/tedtalks \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/test-tedtalks \
@@ -76,8 +75,8 @@ python preprocess_data.py --source-lang=en\
 
 ## preprocess newstest2018
 echo ;echo "====================PREPROCESSING NEWSTEST 2018 VALIDATION========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file newstest18 \
                             --input-path=$INPUT_DATA_DIRECTORY/newstest18/test/newstest2018-encs \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/validation-newstest2018
@@ -85,8 +84,8 @@ python preprocess_data.py --source-lang=en\
 
 ## preprocess newstest2019
 echo ;echo "====================PREPROCESSING NEWSTEST 2019 TEST========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file newstest19 \
                             --input-path=$INPUT_DATA_DIRECTORY/newstest19/sgm/newstest2019-encs \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/test-newstest2019
@@ -94,16 +93,16 @@ python preprocess_data.py --source-lang=en\
 
 ## preprocess czeng test
 echo ;echo "====================PREPROCESSING CZENG TEST========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file czeng \
                             --input-path=$INPUT_DATA_DIRECTORY/czeng_test \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/test-czeng
 
 ## preprocess czeng train
 echo ;echo "====================PREPROCESSING CZENG TRAIN========================="
-python preprocess_data.py --source-lang=en\
-                            --target-lang=cs \
+python preprocess_data.py --source-lang=cs\
+                            --target-lang=en \
                             --type-of-file czeng \
                             --input-path=$INPUT_DATA_DIRECTORY/czeng_train \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/train-czeng

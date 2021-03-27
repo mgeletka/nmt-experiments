@@ -2,8 +2,8 @@
 
 LOGS_DIRECTORY=outputs.log
 DATA_PATH=''
-CHECKPOINTS_DIRECTORY=checkpoints
-TENSORBOARD_LOGDIR=tensorboard
+CHECKPOINTS_DIRECTORY=checkpoints_czeng_cs2en
+TENSORBOARD_LOGDIR=tensorboard_czeng_cs2en
 
 fairseq-train $DATA_PATH \
   --arch transformer_vaswani_wmt_en_de_big \
