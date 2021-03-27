@@ -1,6 +1,6 @@
 # NMT experiment - BASE- MODEL-CZENG
 ## Experiment description
-In this experiment we trained base vaswani transformer model for machine transloation from czech to english
+In this experiment we trained base vaswani transformer model for machine translation from english to czech
 We used same architecture and similar hyperparameters as in this [paper](https://arxiv.org/abs/1806.00187) with it's its [Github](https://github.com/pytorch/fairseq/blob/master/examples/scaling_nmt/README.md)
 
 ## Data description
