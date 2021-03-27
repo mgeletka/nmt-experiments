@@ -47,7 +47,7 @@ done
 
 ## Create python environment and activate it
 python3 -m venv venv
-source /venv/bin/activate
+source venv/bin/activate
 
 
 ### Install  python requirements
@@ -78,7 +78,7 @@ echo ;echo "====================PREPROCESSING NEWSTEST 2018 VALIDATION==========
 python preprocess_data.py --source-lang=cs\
                             --target-lang=en \
                             --type-of-file newstest18 \
-                            --input-path=$INPUT_DATA_DIRECTORY/newstest18/test/newstest2018-encs \
+                            --input-path=$INPUT_DATA_DIRECTORY/newstest18/test/newstest2018-csen \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/validation-newstest2018
 
 
@@ -87,7 +87,7 @@ echo ;echo "====================PREPROCESSING NEWSTEST 2019 TEST================
 python preprocess_data.py --source-lang=cs\
                             --target-lang=en \
                             --type-of-file newstest19 \
-                            --input-path=$INPUT_DATA_DIRECTORY/newstest19/sgm/newstest2019-encs \
+                            --input-path=$INPUT_DATA_DIRECTORY/newstest19/sgm/newstest2019-csen \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/test-newstest2019
 
 
