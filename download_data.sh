@@ -56,42 +56,42 @@ gzip -d $CZENG_TRAIN_GZ_FILE
 
 
 
-#echo
-#echo "====================Downloading CZENG TEST========================="
-#CZENG_TEST_GZ_FILE=$DATA_DIRECTORY/czeng_test.gz
-#wget http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-test.gz -O $CZENG_TEST_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
-#echo "====================EXTRACTING CZENG TEST========================="
-#gzip -d $CZENG_TEST_GZ_FILE
-#
-#
-#echo
-#echo "====================Downloading NEWSTEST 2019========================="
-#NEWSTEST19_TGZ_FILE=$DATA_DIRECTORY/newstest2019.tar
-#
-#wget http://matrix.statmt.org/test_sets/newstest2019.tgz?1556572561 -O $NEWSTEST19_TGZ_FILE
-#
-#echo "====================EXTRACTING NEWSTEST 2019========================="
-#NEWSTEST19_DIRECTORY=$DATA_DIRECTORY/newstest19
-#mkdir $DATA_DIRECTORY/newstest19
-#tar -xf $NEWSTEST19_TGZ_FILE -C $NEWSTEST19_DIRECTORY
-#
-#
-#
-#echo
-#echo "====================Downloading NEWSTEST 2018========================="
-#NEWSTEST18_TGZ_FILE=$DATA_DIRECTORY/newstest2018.tar
-#wget http://matrix.statmt.org/test_sets/newstest2018.tgz?1527073980 -O $NEWSTEST18_TGZ_FILE
-#
-#echo "====================EXTRACTING NEWSTEST 2018========================="
-#NEWSTEST18_DIRECTORY=$DATA_DIRECTORY/newstest18
-#mkdir $DATA_DIRECTORY/newstest18
-#tar -xf $NEWSTEST18_TGZ_FILE -C $NEWSTEST18_DIRECTORY
-#
-#
-#echo
-#echo "====================Downloading TedTalks 2020========================="
-#TEDTALKS_GZ_FILE=$DATA_DIRECTORY/tedtalks.gz
-#wget https://opus.nlpl.eu/download.php?f=TED2020/v1/tmx/cs-en.tmx.gz -O $TEDTALKS_GZ_FILE
-#
-#echo "====================EXTRACTING TedTalks 2020========================="
-#gzip -d $TEDTALKS_GZ_FILE
+echo
+echo "====================Downloading CZENG TEST========================="
+CZENG_TEST_GZ_FILE=$DATA_DIRECTORY/czeng_test.gz
+wget http://ufallab.ms.mff.cuni.cz/~bojar/czeng20-data/czeng20-test.gz -O $CZENG_TEST_GZ_FILE --user=$UFAL_USER --password=$UFAL_PASSWORD
+echo "====================EXTRACTING CZENG TEST========================="
+gzip -d $CZENG_TEST_GZ_FILE
+
+
+echo
+echo "====================Downloading NEWSTEST 2019========================="
+NEWSTEST19_TGZ_FILE=$DATA_DIRECTORY/newstest2019.tar
+
+wget http://matrix.statmt.org/test_sets/newstest2019.tgz?1556572561 -O $NEWSTEST19_TGZ_FILE
+
+echo "====================EXTRACTING NEWSTEST 2019========================="
+NEWSTEST19_DIRECTORY=$DATA_DIRECTORY/newstest19
+mkdir $DATA_DIRECTORY/newstest19
+tar -xf $NEWSTEST19_TGZ_FILE -C $NEWSTEST19_DIRECTORY
+
+
+
+echo
+echo "====================Downloading NEWSTEST 2018========================="
+NEWSTEST18_TGZ_FILE=$DATA_DIRECTORY/newstest2018.tar
+wget http://matrix.statmt.org/test_sets/newstest2018.tgz?1527073980 -O $NEWSTEST18_TGZ_FILE
+
+echo "====================EXTRACTING NEWSTEST 2018========================="
+NEWSTEST18_DIRECTORY=$DATA_DIRECTORY/newstest18
+mkdir $DATA_DIRECTORY/newstest18
+tar -xf $NEWSTEST18_TGZ_FILE -C $NEWSTEST18_DIRECTORY
+
+
+echo
+echo "====================Downloading TedTalks 2020========================="
+TEDTALKS_GZ_FILE=$DATA_DIRECTORY/tedtalks.gz
+wget https://opus.nlpl.eu/download.php?f=TED2020/v1/tmx/cs-en.tmx.gz -O $TEDTALKS_GZ_FILE
+
+echo "====================EXTRACTING TedTalks 2020========================="
+gzip -d $TEDTALKS_GZ_FILE
