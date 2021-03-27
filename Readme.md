@@ -55,17 +55,8 @@ tensorboard --logdir=tensorboard
 
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
-| Czeng test      | X | X | X|X
-| Newstest 2019      | X      |   X | X|X
-| Newstest from sacremoses (origlang en)     | X     |   X | X| X
-| TedTalks 2020 | X  |    X | X|X
-
-
-**Computed BLEU score of Average 5 model**
-
-| Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
-| ------------- |:-------------:| -----:| -----:|  -----:|
-| Czeng test      | X | X | X|X
-| Newstest 2019      | X      |   X | X|X
-| Newstest from sacremoses (origlang en)     | X     |   X | X| X
-| TedTalks 2020 | X  |    X | X|X
+| Czeng test      | X | 15.05 | 15.83|21.8
+| Newstest 2019      | X      |   x |x|x
+| Newstest from sacremoses (origlang en)     | X     | 15.36 | 15.74|20.3
+| TedTalks 2020 | X  |    18.15 | 18.8|23.8
+| Newstest 2017      | X      |   14.43 | 14.91|19.2
