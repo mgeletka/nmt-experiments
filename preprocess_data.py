@@ -53,7 +53,7 @@ def preprocess_newstests(source_filename, target_filename, output_file_prefix, s
                     soup_source = BeautifulSoup(source_file.read())
                     soup_target = BeautifulSoup(target_file.read())
 
-                    for source_document in soup_source.find_all('doc'):
+                    for source_document in soup_source.find_all('doc', attrs={"origlang": source_lang}):
                         target_document = soup_target.find_all(name='doc', attrs={'docid': source_document['docid']})[0]
                         for target_segment in target_document.find_all('seg'):
                             source_segment = source_document.find_all(name='seg', attrs={'id': target_segment['id']})[0]

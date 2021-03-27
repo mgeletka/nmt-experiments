@@ -87,7 +87,7 @@ echo ;echo "====================PREPROCESSING NEWSTEST 2019 TEST================
 python preprocess_data.py --source-lang=cs\
                             --target-lang=en \
                             --type-of-file newstest19 \
-                            --input-path=$INPUT_DATA_DIRECTORY/newstest19/sgm/newstest2019-csen \
+                            --input-path=$INPUT_DATA_DIRECTORY/newstest19/sgm/newstest2019-encs \
                             --output-prefix=$OUTPUT_DATA_DIRECTORY/test-newstest2019
 
 
