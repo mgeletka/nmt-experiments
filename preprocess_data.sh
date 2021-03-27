@@ -45,17 +45,17 @@ while [ "$1" != "" ]; do
     shift
 done
 
-### Create python environment and activate it
-#python3 -m venv venv
-#source /venv/bin/activate
-#
-#
-#### Install  python requirements
-#pip install -r requirements.txt
-#
-#
-### Preprocess data to fairseq format
-### preprocess first 10k lines of TEDTALK as validation set
+## Create python environment and activate it
+python3 -m venv venv
+source /venv/bin/activate
+
+
+### Install  python requirements
+pip install -r requirements.txt
+
+
+## Preprocess data to fairseq format
+## preprocess first 10k lines of TEDTALK as validation set
 echo ;echo "====================PREPROCESSING TEDTALK VALIDATION========================="
 python preprocess_data.py --source-lang=cs\
                             --target-lang=en \
