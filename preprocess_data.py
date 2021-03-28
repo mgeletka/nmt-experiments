@@ -1,6 +1,7 @@
 import argparse
 import regex as re
 from bs4 import BeautifulSoup
+import os.path
 
 
 def preprocess_czeng20(input_filename, output_file_prefix, source_lang='en', target_lang='cs', take_from_sentence=None,
@@ -36,6 +37,11 @@ def preprocess_newstest19(input_filename_prefix, output_file_prefix, source_lang
                           take_from_sentence=None, take_to_sentence=None):
     source_filename = f"{input_filename_prefix}-src-ts.{source_lang}.sgm"
     target_filename = f"{input_filename_prefix}-ref-ts.{target_lang}.sgm"
+
+    if not os.path.isfile(source_filename) or not os.path.isfile(source_filename):
+        # NOTE for some languages exists only one direction
+        source_filename = f"{input_filename_prefix}-ref-ts.{source_lang}.sgm"
+        target_filename = f"{input_filename_prefix}-src-ts.{target_lang}.sgm"
 
     return preprocess_newstests(source_filename, target_filename, output_file_prefix, source_lang, target_lang,
                                 take_from_sentence, take_to_sentence)
