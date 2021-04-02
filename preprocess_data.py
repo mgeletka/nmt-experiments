@@ -19,8 +19,8 @@ def preprocess_czeng20(input_filename, output_file_prefix, source_lang='en', tar
                     if (take_from_sentence and line_counter >= take_from_sentence) or not take_from_sentence:
                         if (take_to_sentence and line_counter < take_to_sentence) or not take_to_sentence:
                             sentence_id, adq_score, _, _, cs_sentence, en_sentence = re.split(r'\t+', line)
-                            cs_file.write(f"{cs_sentence}\n")
-                            en_file.write(en_sentence)
+                            cs_file.write(f"{en_sentence}")
+                            en_file.write(f"{cs_sentence}\n")
                     line_counter += 1
 
 
@@ -83,8 +83,8 @@ def preprocess_tedtalks(input_filename, output_file_prefix, source_lang='en', ta
             with open(f'{output_file_prefix}.{source_lang}', 'w') as source_file:
                 soup = BeautifulSoup(tmx_file.read())
                 for tu_element in soup.find_all('body')[0].find_all('tu'):
-                    target_element = tu_element.find_all(name='tuv', attrs={'xml:lang': 'cs'})[0]
-                    source_element = tu_element.find_all(name='tuv', attrs={'xml:lang': 'en'})[0]
+                    target_element = tu_element.find_all(name='tuv', attrs={'xml:lang': target_lang})[0]
+                    source_element = tu_element.find_all(name='tuv', attrs={'xml:lang': source_lang})[0]
                     if target_element.contents[0].contents and source_element.contents[0].contents:
                         if (take_from_sentence and line_counter >= take_from_sentence) or not take_from_sentence:
                             if (take_to_sentence and line_counter < take_to_sentence) or not take_to_sentence:
