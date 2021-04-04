@@ -75,10 +75,10 @@ tensorboard --logdir=tensorboard
 | TedTalks 2020 | 35.82  |    28.34 | 29.04 |33.2
 
 
-**Computed BLEU score of Average 5 model**
+**Computed BLEU score of Average 5 model** (in this experiment avaraging 5 last checkpoints didn't help)
 
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
 | Czeng test      | 44.7 | 37.7 | 38.85| 43.0
-| Newstest 2019      | X      |   X | X|X
-| TedTalks 2020 | X  | X | X |X
+| Newstest 2019      | 29.27      |   24.89 | 26.26|27.7
+| TedTalks 2020 | 35.49  | 28.17 | 28.87 |33.0
