@@ -58,11 +58,9 @@ This whole experiment was executed on single NVIDIA RXT 3080 GPU.
 
 ## Model evaluation
 
-### Tensorboard
-To see detail of this particular experimetn run please download tensorboard directory in this branch and run
-(You must have active virtualenv with installed tensorboard)
-```bash
-tensorboard --logdir=tensorboard
+### Weight and Biases
+For this run we used weight and biases project.
+The experiment run is publicly available at this [link](https://wandb.ai/geletka/nmt-cs2en/runs/9qqg4fu9/overview)
 ```
 
 ### BLEU on test sets
