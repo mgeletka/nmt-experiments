@@ -70,23 +70,15 @@ tensorboard --logdir=tensorboard
 
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
-| Czeng test      | 37.82 | 29.87 | 30.58|36.4
-| Newstest 2019      | 31.06      |   23.27 | 23.89|28.0
-| Newstest from sacremoses (origlang en)     | X     |   19.67 | 20.06| 24.7
-| TedTalks 2020 | 28.99  |    19.93 | 20.65 |25.9
-| Newstest2017 | X  | 18.54 | 19.07 | 23.6
+| Czeng test      | 44.8 | 37.74 | 38.89| 43.0
+| Newstest 2019      | 23.97      |   24.77 | 26.08 |28.8
+| TedTalks 2020 | 35.82  |    28.34 | 29.04 |33.2
 
-
-**Computed BLEU scores of Average 8  model**
-TODO
-Newstest from sacremoses (origlang en)	= 25.1
 
 **Computed BLEU score of Average 5 model**
 
 | Test set        | Tokenized BLEU | Detokenized BLEU - cased  | Detokenized BLEU | SacreBLEU |
 | ------------- |:-------------:| -----:| -----:|  -----:|
-| Czeng test      | 38.0 | 30.02 | 30.73|36.6
-| Newstest 2019      | 31.19      |   23.39 | 23.99|28.2
-| Newstest from sacremoses (origlang en)     | X     |   20.15 | 20.54| 25.3
-| TedTalks 2020 | 29.3  | 20.1 | 20.82 | 26.2
-| Newstest2017 | X  | 18.58 | 19.07 | 23.6
+| Czeng test      | 44.7 | 37.7 | 38.85| 43.0
+| Newstest 2019      | X      |   X | X|X
+| TedTalks 2020 | X  | X | X |X
