@@ -20,7 +20,6 @@ fairseq-train $DATA_PATH \
   --criterion label_smoothed_cross_entropy \
   --label-smoothing 0.1 \
   --max-tokens 3584 \
-  --fp16 \
   --valid-subset=valid,valid1 \
   --tensorboard-logdir $TENSORBOARD_LOGDIR \
   --save-interval 1 \
@@ -29,4 +28,5 @@ fairseq-train $DATA_PATH \
   --eval-bleu \
   --update-freq=16 \
   --patience 5 \
+  --wandb-project nmt-en-cs \
   --save-dir $CHECKPOINTS_DIRECTORY &>>$LOGS_DIRECTORY &
