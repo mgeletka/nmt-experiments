@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOGS_DIRECTORY=outputs.log
-DATA_PATH=''
+DATA_PATH='data-bin'
 CHECKPOINTS_DIRECTORY=checkpoints
 TENSORBOARD_LOGDIR=tensorboard
 
